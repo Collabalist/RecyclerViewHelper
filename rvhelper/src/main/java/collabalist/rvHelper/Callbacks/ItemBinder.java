@@ -1,5 +1,10 @@
 package collabalist.rvHelper.Callbacks;
 
+/**
+ *
+ * @param <M> stands for Model class
+ * @param <B> stands for Binder class
+ */
 public interface ItemBinder<M, B> {
     /**
      * onBind

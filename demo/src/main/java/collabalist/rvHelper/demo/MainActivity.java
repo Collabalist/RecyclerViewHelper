@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         list.add(new CustomItem("Name11", "11"));
 
 
+
         RvHelper.with(MainActivity.this)
                 .into(recyclerView)
                 .setListingOrientation(RvHelper.VERTICAL, false)
