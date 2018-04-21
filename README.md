@@ -31,11 +31,11 @@ Add the dependency
 
 ## **Usage**
 - Without any click
-![](https://d2mxuefqeaa7sj.cloudfront.net/s_6D7BF49194133EAB0B7FF51BF5ADA190705B5801E97126E2742E79EA0B85BD4A_1524301956196_device-2018-04-21-144157.png)
 
 
 
-    RvHelper.with(MainActivity.this)
+   ```
+ RvHelper.with(MainActivity.this)
             .into(recyclerView)
             .setListingOrientation(RvHelper.VERTICAL, 
                   false)
@@ -57,18 +57,19 @@ Add the dependency
                     holder.age.setText(item.age);
                 }
             });
+```
 
 
 - With click events
-    RvHelper.with(MainActivity.this)
+
+
+             RvHelper.with(MainActivity.this)
             .into(recyclerView)
             .setListingOrientation(RvHelper.VERTICAL, false)
             .setLayoutRes(R.layout.item_rv)
             .setListing(list)
             .setClickableViews(R.id.plus, R.id.minus)
-            .build(new ClickableBind<CustomItem, ItemRvBinding>() {
-    
-                @Override
+            .build(new ClickableBind<CustomItem, ItemRvBinding>() {@Override
                 public void onBind(int position, CustomItem item, ItemRvBinding holder) {
                     holder.name.setText(item.name);
                     holder.age.setText(item.age);
@@ -88,11 +89,10 @@ Add the dependency
                     }
                 }
             });
-https://www.dropbox.com/s/cshxpzsftbmhon9/device-2018-04-21-145250.mp4?dl=0
 
 
 
 ****
 ## **To-Do**
 [ ] Multi view binding
-[ ] include View Margin @Deepak Sharma
+[ ] include View Margin @Deepak S
