@@ -34,7 +34,25 @@ public class MainActivity extends AppCompatActivity {
         list.add(new CustomItem("Name10", "10"));
         list.add(new CustomItem("Name11", "11"));
 
-
+//        RvHelper.with(MainActivity.this)
+//                .into(recyclerView)
+//                .setListingOrientation(RvHelper.VERTICAL, false)
+//                .setLayoutRes(R.layout.item_rv)
+//                .setListing(list)
+//                .build(new ItemBinder<CustomItem, ItemRvBinding>() {
+//                    /**
+//                     * onBind
+//                     *
+//                     * @param position
+//                     * @param item
+//                     * @param holder
+//                     */
+//                    @Override
+//                    public void onBind(int position, CustomItem item, ItemRvBinding holder) {
+//                        holder.name.setText(item.name);
+//                        holder.age.setText(item.age);
+//                    }
+//                });
 
         RvHelper.with(MainActivity.this)
                 .into(recyclerView)
@@ -52,16 +70,16 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onClick(View view, CustomItem model, int position) {
-                       switch (view.getId()){
-                           case R.id.minus:
-                               list.remove(position);
-                               recyclerView.getAdapter().notifyItemRemoved(position);
-                               break;
-                           case R.id.plus:
-                               list.add(position,model);
-                               recyclerView.getAdapter().notifyItemInserted(position);
-                               break;
-                       }
+                        switch (view.getId()) {
+                            case R.id.minus:
+                                list.remove(position);
+                                recyclerView.getAdapter().notifyItemRemoved(position);
+                                break;
+                            case R.id.plus:
+                                list.add(position, model);
+                                recyclerView.getAdapter().notifyItemInserted(position);
+                                break;
+                        }
                     }
                 });
     }
