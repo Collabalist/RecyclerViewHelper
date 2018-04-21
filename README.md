@@ -4,7 +4,7 @@ It is a simple Library which helps to reduce a bunch of code.
 
 - No need to create Extra View Holders
 - No need to create seperate Adapters
-- No need to maintail any extra click callbacks
+- No need to maintain any extra click callbacks
 ## **What to do then..?**
 - Just create view xml's with data binding
 - That's it.
@@ -29,7 +29,10 @@ Add the dependency
 ## **Usage**
 - Without any click
 
- 		RvHelper.with(MainActivity.this)
+ 		ArrayList<CustomItem> list = new ArrayList<>();
+        .....
+        .....
+        RvHelper.with(MainActivity.this)
            .into(recyclerView)
             .setListingOrientation(RvHelper.VERTICAL, 
                   false)
@@ -56,6 +59,9 @@ Add the dependency
 - With click events
 
 
+             ArrayList<CustomItem> list = new ArrayList<>();
+            .....
+            .....
              RvHelper.with(MainActivity.this)
             .into(recyclerView)
             .setListingOrientation(RvHelper.VERTICAL, false)
@@ -88,4 +94,4 @@ Add the dependency
 ****
 ## **To-Do**
 [ ] Multi view binding
-[ ] include View Margin @Deepak S
+[ ] include View Margin @Deepak Sharma
